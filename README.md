@@ -1,5 +1,5 @@
 ### q-kdb - Exercises
-###### increasing sequence exercise
+###### Q1) Increasing Sequence Exercise
 ###### Taking some random list, find an increasing sequence from your first element in your list
 ###### list of (10 22 9 33 21 50 41 60 80) should equal (10 22 33 50 60 80)
 q)list:10 22 9 33 21 50 41 60 80
