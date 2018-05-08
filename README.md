@@ -9,3 +9,5 @@ q)increaseSeq:list[0],((distinct asc increaseSeq)_((count distinct asc increaseS
 q)increaseSeq <br />
 10 22 33 50 60 80
 
+###### Q2)
+
