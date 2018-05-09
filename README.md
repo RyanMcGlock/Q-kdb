@@ -13,9 +13,8 @@ q)increaseSeq <br />
 ###### Q2) Arrange Disks 
 ###### A row of 2n disks of two colours, n dark(1) and n light(0), sequence will be even and start with a dark colour
 q)list:1 0 1 1 0 0
-q)arrangeDisks:{if[not `newList in key`.;newList:list];
-
-		  if[not list[0]=/(newList[til `long$((count newList)%2)]);
+arrangeDisks:{if[not `newList in key`.;newList:list];
+		if[not list[0]=/(newList[til `long$((count newList)%2)]);
 		
 			    if[not `counter in key`.;counter:1];
 
