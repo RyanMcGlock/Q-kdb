@@ -27,6 +27,6 @@ q)increaseSeq <br />
 		      ]
 	      }
 
-q)arrangeDisks each til `long$((count(list))%2)
-1 1 1 0 0 0
+	q)arrangeDisks each til `long$((count(list))%2)
+	1 1 1 0 0 0
 
