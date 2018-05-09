@@ -10,5 +10,23 @@ q)increaseSeq:list[0],((distinct asc increaseSeq)_((count distinct asc increaseS
 q)increaseSeq <br />
 10 22 33 50 60 80
 
-###### Q2)
+###### Q2) Arrange Disks 
+###### A row of 2n disks of two colours, n dark(1) and n light(0), sequence will be even and start with a dark colour
+q)list:1 0 1 1 0 0
+q)arrangeDisks:{if[not `newList in key`.;newList:list];
+
+		  if[not list[0]=/(newList[til `long$((count newList)%2)]);
+		
+			    if[not `counter in key`.;counter:1];
+
+			    if[newList[x]<>newList[0];
+				          newList[x]:list[(where list=list[0])[counter]];
+				          newList[(where list=list[0])[counter]]:0;
+				          counter+:1
+			      ]
+		      ]
+	      }
+
+q)arrangeDisks each til `long$((count(list))%2)
+1 1 1 0 0 0
 
