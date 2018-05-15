@@ -1,5 +1,12 @@
 ### q-kdb - Exercises
-###### Q1) Increasing Sequence Exercise
+###### Q1) Sorting Elements of an Array by Frequency
+###### Count each distinct element in the array and sorted by the highest count
+	q)l:12 9 12 4 12 4 9 7 9 12
+	q)dictFreq:desc (distinct l)!(count each {where l=x}each distinct l)
+	q)raze {x#y}'[value dictFreq;key dictFreq]
+	12 12 12 12 9 9 9 4 4 7
+	
+###### Q2) Increasing Sequence Exercise
 ###### Taking some random list, find an increasing sequence from your first element in your list
 ###### list of (10 22 9 33 21 50 41 60 80) should equal (10 22 33 50 60 80)
 	q)list:10 22 9 33 21 50 41 60 80 
@@ -10,7 +17,7 @@
 	q)increaseSeq 
 	10 22 33 50 60 80
 
-###### Q2) Arrange Disks 
+###### Q3) Arrange Disks 
 ###### A row of 2n disks of two colours, n dark(1) and n light(0), sequence will be even and start with a dark colour, only allowed one move at a time!
 	q)list:1 0 1 1 0 0
 
