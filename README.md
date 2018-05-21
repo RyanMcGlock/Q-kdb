@@ -30,7 +30,7 @@
 	q)newLevel:{[x;l] newValues:{l[x-1][y-1] + max(l[x][y-1];l[x][y])}'[x#x;1 + til x];newValues}[x;l]
 	q)l[x-1]:newLevel
 	q)l:-1_l
-	\\ Note: need to finish this to do it all in one recursive call
+	//Note: need to finish this to do it all in one recursive call
 	q)l
 	1
 	7 9
