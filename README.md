@@ -22,7 +22,21 @@
 	q)increaseSeq 
 	10 22 33 50 60 80
 
-###### Q4) Arrange Disks 
+###### Q4) Find the Maximum sum down through a pyramid. Only allowed to add a given number to its two below child numbers, therefore need to find the max path.
+##### One approach is to start at the bottom and collaspe each level to you reach the top layer. Below is an example of just collasping one layer, can easily wrap it up and do it over each list.
+	q)l:(1;2 3;4 5 6)
+	q)
+	q)x:2
+	q)newLevel:{[x;l] newValues:{l[x-1][y-1] + max(l[x][y-1];l[x][y])}'[x#x;1 + til x];newValues}[x;l]
+	q)l[x-1]:newLevel
+	q)l:-1_l
+	\\ Note: need to finish this to do it all in one recursive call
+	q)l
+	1
+	7 9
+	q)
+
+###### Q5) Arrange Disks 
 ###### A row of 2n disks of two colours, n dark(1) and n light(0), sequence will be even and start with a dark colour, only allowed one move at a time!
 	q)list:1 0 1 1 0 0
 
