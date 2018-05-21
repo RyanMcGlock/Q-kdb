@@ -22,7 +22,14 @@
 	q)increaseSeq 
 	10 22 33 50 60 80
 
-###### Q4) Find the Maximum sum down through a pyramid. Only allowed to add a given number to its two below child numbers, therefore need to find the max path.
+###### Q4) QuickSort Algorithim - I stumbled across this solution, which trumped mine by just a little bit ...
+###### Breaking it down, it will take rand x as the pivot, then using not scan it will find a list higher and lower of the pivot. Then using these two lists it will apply the same fuction to these two lists etc. Raze used to flatten the list at the end.
+	q)q:{$[2>count distinct x;x;raze q each x where each not scan x < rand x]}
+	q)x:6 1 10 8 73 2
+	q)q[x]
+	1 2 6 8 10 73
+
+###### Q5) Find the Maximum sum down through a pyramid. Only allowed to add a given number to its two below child numbers, therefore need to find the max path.
 ##### One approach is to start at the bottom and collaspe each level to you reach the top layer. Below is an example of just collasping one layer, can easily wrap it up and do it over each list.
 	q)l:(1;2 3;4 5 6)
 	q)
@@ -36,7 +43,7 @@
 	7 9
 	q)
 
-###### Q5) Arrange Disks 
+###### Q6) Arrange Disks 
 ###### A row of 2n disks of two colours, n dark(1) and n light(0), sequence will be even and start with a dark colour, only allowed one move at a time!
 	q)list:1 0 1 1 0 0
 
